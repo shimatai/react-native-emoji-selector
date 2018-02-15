@@ -315,7 +315,7 @@ export default class EmojiSelector extends Component {
                     {showTabs && this.renderTabs()}
                 </View>
                 <View style={{flex: 1}}>
-                    {showSearchBar ? Searchbar : null}
+                    {showSearchBar && Searchbar}
                     {this.state.isReady ? (
                         <View style={{flex: 1}}>
                             <View style={styles.container}>
