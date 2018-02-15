@@ -98,7 +98,7 @@ const EmojiCell = ({ emoji, colSize, ...other }) => (
         }}
         {...other}
     >
-        <Text style={{ fontSize: (colSize) - 12 }}>
+        <Text style={{ fontSize: Platform.OS == 'ios' ? (colSize) - 12 : 10 }}>
             {charFromEmojiObject(emoji)}
         </Text>
     </TouchableOpacity>
@@ -296,7 +296,7 @@ export default class EmojiSelector extends Component {
             <View style={styles.searchbar_container}>
                 <TextInput
                     style={styles.search}
-                    placeholder='Search...'
+                    placeholder='Pesquisar...'
                     clearButtonMode='always'
                     returnKeyType='done'
                     autoCorrect={false}
@@ -315,7 +315,7 @@ export default class EmojiSelector extends Component {
                     {showTabs && this.renderTabs()}
                 </View>
                 <View style={{flex: 1}}>
-                    {showSearchBar && Searchbar}
+                    {showSearchBar ? Searchbar : null}
                     {this.state.isReady ? (
                         <View style={{flex: 1}}>
                             <View style={styles.container}>

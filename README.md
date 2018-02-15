@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-npm install --save react-native-emoji-selector
+npm install --save git+https://github.com/shimatai/react-native-emoji-selector.git
 ```
 
 ```
